@@ -1,0 +1,50 @@
+<ion-content>
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <h4 class="text-center text-secondary">{{title}}</h4>
+        <hr>
+        <div class="mb-2">
+          <div class="lds-facebook mx-auto"><div [hidden]="!showLoader"></div><div [hidden]="!showLoader"></div><div [hidden]="!showLoader"></div></div>
+        </div>
+        <div>
+          <form>
+            <div class="form-group">
+              <label for="mem-id">Member-ID</label>
+              <input type="text" name="memId" [(ngModel)]="member.id" (input)="idEntered()" class="form-control" id="mem-id"
+                placeholder="Enter Member ID" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="mem-name">Member-Name</label>
+              <input type="text" name="memName" [(ngModel)]="member.name" [ngModelOptions]="{standalone: true}" class="form-control" id="mem-name" disabled
+                readonly>
+            </div>
+            <div class="form-group">
+              <label for="mem-points">Total-Points</label>
+              <input type="text" name="memPoints" [(ngModel)]="member.points" class="form-control" id="mem-points"
+                disabled readonly>
+            </div>
+  
+            <div class="form-group">
+              <label>Enter-Points</label>
+              <div class="form-row">
+                  <div class="col">
+                      <input type="text" name="newPoints" [(ngModel)]="newPoints" class="form-control" id="mem-newpt" placeholder="Enter Points" autocomplete="off">
+                  </div>
+                  <div class="col">
+                      <button type="button" class="btn btn-outline-secondary" (click)="addPoints()">Add Points</button>
+                  </div>
+              </div>
+  
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>  
+</ion-content>
+
+<ion-footer>
+  <small class="m-3">&copy; Sai Han Inc.</small>
+</ion-footer>

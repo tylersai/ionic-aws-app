@@ -1,0 +1,7 @@
+{
+  "name": "ionic-aws-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
